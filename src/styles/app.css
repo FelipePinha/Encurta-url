@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.center {
+    max-width: 114rem;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2%;
+}
+
+main h1 {
+    font-size: 3rem;
+}
+
+main p {
+    font-size: 1.6rem;
+    color: #696969;
+}
