@@ -31,3 +31,40 @@ main p {
     font-size: 1.6rem;
     color: #696969;
 }
+
+form {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form > input {
+    padding: 1rem;
+    border-radius: 0.6rem;
+    border: 1px solid #6cb4ee;
+    background-color: #ffff;
+    outline-color: #72a0c1;
+}
+
+form > button {
+    padding: 1rem;
+    border-radius: 0.6rem;
+    border: none;
+    background-color: #696969;
+    opacity: 0.5;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+form > button.active {
+    cursor: pointer;
+    opacity: 1;
+    background-color: #03c03c;
+    font-weight: 700;
+    transition: background-color 0.2s ease;
+}
+
+form > button.active:hover {
+    background-color: #32de84;
+}
