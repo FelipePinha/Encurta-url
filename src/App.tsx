@@ -1,10 +1,10 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
+import { CopyLink } from './components/CopyLink';
 import './styles/app.css';
-// import axios from 'axios';
-// key=[API_KEY]&short=$url
 
 function App() {
     const [link, setLink] = useState<string>('');
+    const [shortedUrl, setShortedUrl] = useState<string>('');
 
     const handleChangeLink = (e: ChangeEvent<HTMLInputElement>) => {
         setLink(e.target.value);
@@ -29,7 +29,7 @@ function App() {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
+                    setShortedUrl(data.link);
                 });
         }
     };
@@ -50,6 +50,7 @@ function App() {
                         Gerar Link
                     </button>
                 </form>
+                <CopyLink shortedUrl={shortedUrl} />
             </main>
         </div>
     );
